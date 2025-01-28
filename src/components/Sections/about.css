@@ -1,0 +1,135 @@
+.about {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+}
+.profile-icon {
+    width: 250px;
+    margin: 25px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    padding: 0 3vw;
+}
+
+.about-skills {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 95%;
+    padding: 0 3vw;
+}
+.skill-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3px;
+    padding: 10px 20px;
+    position: relative;
+    min-width: 60%;
+    height: 80px;
+}
+.skill-container::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px; 
+    padding: 3px; 
+    background:linear-gradient(120deg,#6297d8,#e55467); 
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+    
+}
+
+.skill-icon {
+    max-width: 50px;
+}
+
+.skill-name {
+    font-size: 0.6rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #fafafa
+    
+}
+@media only screen and (max-width: 300px ) {
+    .skill-container {
+        min-width: 60px !important;
+        padding: 5px 7px;
+        
+    }
+    .skill-icon {
+        width: 30px;
+    }
+  
+}
+@media only screen and (max-width: 330px) {
+    .skill-container {
+        min-width: 50px !important;
+    }
+    .skill-icon {
+        max-width: 40px;
+    }
+    .skill-name {
+        font-size: 0.6rem;
+    }
+}
+@media only screen and (min-width: 430px) {
+    .about-skills {
+        gap: 50px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .about-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 1010px) {
+    .about-content {
+        margin: 0px 30px;
+    }
+    .skill-icon {
+        width: 50px;
+    }
+    .skill-container {
+     
+        padding: 10px 50px;
+        max-width: 60%;
+        height: 80px;
+    }
+    .about-skills {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,64 @@
+.hero {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 5vh;
+}
+
+.name {
+  color: #ff4d5a;
+}
+
+.line1 {
+  animation: slideText1 0.4s ease-in;
+}
+.line2 {
+  animation: slideText2 0.4s ease-in;
+}
+
+.line3 {
+  font-size: 3vh;
+  padding: 10px 50px;
+  border: 2px solid #ff4d5a;
+  color: #ff4d5a;
+  transition: 0.3s;
+  animation: slideText3 0.4s ease-in;
+}
+.line3:hover {
+  transform: scale(1.1);
+  border: 2px solid #fefefe;
+  color: #fefefe;
+  cursor: pointer;
+  background: linear-gradient(to left, #ff4d5a 50%, #1a1a1a 50%) right;
+  background-size: 200% 100%;
+}
+
+@keyframes slideText1 {
+  0% {
+    transform: translateX(-150px);
+  }
+}
+
+@keyframes slideText2 {
+  0% {
+    transform: translateX(150px);
+  }
+}
+
+@keyframes slideText3 {
+  0% {
+    transform: translateY(50px);
+  }
+}
