@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { RefObject, useRef } from "react";
 import Navigation from "./Navigation/Navigation";
 import Hero from "./Sections/Hero";
@@ -9,12 +10,12 @@ import { useElementDetector } from "use-detector-hook";
 
 export default function HomeContainer() {
   const { setCurrentSection } = useSectionState();
-  const hero = useRef<HTMLElement>(null);
-  const about = useRef<HTMLElement>(null);
-  const contacts = useRef<HTMLElement>(null);
-  const projects = useRef<HTMLElement>(null);
+  const hero = useRef<HTMLDivElement>(null);
+  const about = useRef<HTMLDivElement>(null);
+  const contacts = useRef<HTMLDivElement>(null);
+  const projects = useRef<HTMLDivElement>(null);
 
-  const scrollToSection = (elementRef: RefObject<HTMLDivElement>) => {
+  const scrollToSection = (elementRef: RefObject<HTMLElement>) => {
     if (elementRef.current) {
       window.scrollTo({
         top: elementRef.current.offsetTop,
@@ -30,6 +31,7 @@ export default function HomeContainer() {
       onTriggerEnter: () => setCurrentSection("hero"),
     }
   );
+
 
   const aboutVisible = useElementDetector(
     about,
@@ -65,9 +67,9 @@ export default function HomeContainer() {
         about={about}
         contacts={contacts}
       />
-      <About aboutRef={about} scrollToSection={scrollToSection} />
-      <Projects projectsRef={projects} scrollToSection={scrollToSection} />
-      <Contacts contactsRef={contacts} scrollToSection={scrollToSection} />
+      <About aboutRef={about} />
+      <Projects projectsRef={projects} />
+      <Contacts contactsRef={contacts} />
     </>
   );
 }

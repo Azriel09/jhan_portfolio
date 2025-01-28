@@ -9,7 +9,6 @@ import NodeJSPNG from "../../assets/nodejs.png";
 import SassPNG from "../../assets/sass.png";
 import ReactPNG from "../../assets/react.png";
 import MuiPNG from "../../assets/mui.png";
-import AwsPNG from "../../assets/aws.png";
 import GitPNG from "../../assets/git.png";
 import MySQLPNG from "../../assets/mysql.png";
 import { RefObject } from "react";
