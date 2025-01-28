@@ -1,10 +1,10 @@
 import "./contacts.css";
 import "./main-styles.css";
 import { RefObject } from "react";
-type ContactsSectionProps = {
+type ContactsProps = {
   contactsRef: RefObject<HTMLHeadingElement>;
 };
-const ContactsSection: React.FC<ContactsSectionProps> = ({ contactsRef }) => {
+const ContactsSection: React.FC<ContactsProps> = ({ contactsRef }) => {
   return (
     <div className="contact page" ref={contactsRef}>
       <h2 className="page-header">Contacts</h2>

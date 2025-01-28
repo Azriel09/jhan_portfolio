@@ -1,12 +1,12 @@
 import { RefObject } from "react";
 import "./hero.css";
 
-type HeroSectionProps = {
+type HeroProps = {
   heroRef: RefObject<HTMLElement>;
   aboutRef: RefObject<HTMLElement>;
   scrollToSection: (elementRef: RefObject<HTMLElement>) => void;
 };
-const HeroSection: React.FC<HeroSectionProps> = ({
+const HeroSection: React.FC<HeroProps> = ({
   heroRef,
   aboutRef,
   scrollToSection,
