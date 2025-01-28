@@ -1,13 +1,13 @@
 import useDetectScroll from "@smakss/react-scroll-direction";
 import { useSectionState } from "../../context/section_context";
 import "./Navigation.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, RefObject } from "react";
 
 type NavigationProps = {
-  hero: React.RefObject<HTMLElement>;
-  projects: React.RefObject<HTMLElement>;
-  about: React.RefObject<HTMLElement>;
-  contacts: React.RefObject<HTMLElement>;
+  hero: RefObject<HTMLDivElement>;
+  projects: RefObject<HTMLDivElement>;
+  about: RefObject<HTMLDivElement>;
+  contacts: RefObject<HTMLDivElement>;
   scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
 };
 
@@ -34,7 +34,7 @@ export default function Navigation({
       } else {
         setIsSticky(false);
       }
-    } // Detects collision of navbar to the top
+    }
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

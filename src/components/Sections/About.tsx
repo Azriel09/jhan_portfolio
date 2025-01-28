@@ -15,7 +15,7 @@ import MySQLPNG from "../../assets/mysql.png";
 import { RefObject } from "react";
 
 type AboutProps = {
-  aboutRef: RefObject<HTMLElement>;
+  aboutRef: RefObject<HTMLDivElement>;
 };
 
 const AboutSection: React.FC<AboutProps> = ({ aboutRef }) => {

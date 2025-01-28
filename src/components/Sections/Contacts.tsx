@@ -2,7 +2,7 @@ import "./contacts.css";
 import "./main-styles.css";
 import { RefObject } from "react";
 type ContactsProps = {
-  contactsRef: RefObject<HTMLHeadingElement>;
+  contactsRef: RefObject<HTMLDivElement>;
 };
 const ContactsSection: React.FC<ContactsProps> = ({ contactsRef }) => {
   return (

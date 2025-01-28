@@ -14,7 +14,7 @@ export default function HomeContainer() {
   const contacts = useRef<HTMLElement>(null);
   const projects = useRef<HTMLElement>(null);
 
-  const scrollToSection = () => {
+  const scrollToSection = (elementRef: RefObject<HTMLDivElement>) => {
     if (elementRef.current) {
       window.scrollTo({
         top: elementRef.current.offsetTop,
